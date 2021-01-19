@@ -96,9 +96,9 @@ USE_TZ = True
 
 STATIC_URL = "/s/"
 
-STATIC_DIR = DIR_SRC / "static"
-STATICFILES_DIRS = [STATIC_DIR]
-# STATIC_ROOT = DIR_SRC / "static"
+#STATIC_DIR = DIR_SRC / "static"
+#STATICFILES_DIRS = [STATIC_DIR]
+STATIC_ROOT = DIR_SRC / "static"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = DIR_SRC / "media"
