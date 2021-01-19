@@ -100,7 +100,7 @@ STATIC_URL = "/s/"
 STATIC_ROOT = DIR_REPO / ".static"
 
 STATICFILES_DIRS = [
-    DIR_PROJECT / "static",
+    DIR_SRC / "static",
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
