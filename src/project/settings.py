@@ -97,9 +97,11 @@ USE_TZ = True
 
 STATIC_URL = "/s/"
 
-STATIC_DIR = DIR_SRC / "static"
-#STATICFILES_DIRS = [STATIC_DIR]
-STATIC_ROOT = DIR_PROJECT / ".static"
+STATIC_ROOT = DIR_REPO / ".static"
+
+STATICFILES_DIRS = [
+    DIR_PROJECT / "static",
+]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
