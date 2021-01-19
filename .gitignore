@@ -1,0 +1,8 @@
+.idea
+idea
+db.sqlite3
+
+src/media/*
+
+# Ignore dynaconf secret files
+.secrets.*
