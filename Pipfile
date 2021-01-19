@@ -15,6 +15,7 @@ isort = "*"
 ipython = "*"
 pillow = "*"
 django-ckeditor = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
