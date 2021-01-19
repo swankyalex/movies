@@ -101,8 +101,7 @@ STATIC_URL = "/s/"
 #STATICFILES_DIRS = [STATIC_DIR]
 STATIC_ROOT = DIR_PROJECT / ".static"
 
-if not DEBUG:
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = DIR_SRC / "media"
