@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -96,9 +97,12 @@ USE_TZ = True
 
 STATIC_URL = "/s/"
 
-#STATIC_DIR = DIR_SRC / "static"
-#STATICFILES_DIRS = [STATIC_DIR]
-STATIC_ROOT = DIR_SRC / "static"
+STATIC_DIR = DIR_SRC / "static"
+STATICFILES_DIRS = [STATIC_DIR]
+STATIC_ROOT = DIR_REPO / ".static"
+
+if not DEBUG:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = DIR_SRC / "media"
