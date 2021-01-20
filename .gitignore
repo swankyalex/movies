@@ -3,6 +3,6 @@ idea
 db.sqlite3
 
 src/media/*
-
+.static
 # Ignore dynaconf secret files
 .secrets.*
