@@ -14,7 +14,7 @@ default:
   DIRS_TEMPLATES:
     - src/project/templates/
   HOST: ""
-  MODE_DEBUG: true
+  MODE_DEBUG: false
   MODE_PROFILING: false
   PORT: -1
   PROJECT_NAME: ""
