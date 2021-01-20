@@ -15,6 +15,7 @@ isort = "*"
 ipython = "*"
 pillow = "*"
 django-ckeditor = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"

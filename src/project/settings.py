@@ -16,7 +16,6 @@ DEBUG = _ds.MODE_DEBUG
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "9d7aa10b1140.ngrok.io",
     _ds.HOST,
 ]
 
@@ -34,6 +33,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -96,9 +96,12 @@ USE_TZ = True
 
 STATIC_URL = "/s/"
 
-STATIC_DIR = DIR_SRC / "static"
-STATICFILES_DIRS = [STATIC_DIR]
-# STATIC_ROOT = DIR_SRC / "static"
+STATIC_ROOT = DIR_REPO / ".static"
+
+STATICFILES_DIRS = [
+    DIR_SRC / "static",
+]
+
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = DIR_SRC / "media"

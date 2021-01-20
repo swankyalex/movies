@@ -40,5 +40,5 @@ ci:
 
 heroku:
   MODE_DEBUG: false
-  HOST: "swankyaleks.herokuapp.com"
+  HOST: "movie-swankyaleks.herokuapp.com"
   VENV_SYNTHETIC: true

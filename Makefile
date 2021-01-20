@@ -64,7 +64,7 @@ db: resetdb
 
 
 .PHONY: data
-data: static
+data: static migrate
 	$(call log, preparing data)
 
 
