@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9a0ea4263ecfa7a7fabd8c39ed92d40061409b810a60b8ec60b8b17ba40f2851"
+            "sha256": "e05712d72ff1b2e276bd4ca9bdc6b54983132c06ebb5912932e51604bce0de81"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,6 +44,21 @@
             ],
             "index": "pypi",
             "version": "==20.8b1"
+        },
+        "certifi": {
+            "hashes": [
+                "sha256:1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c",
+                "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
+            ],
+            "version": "==2020.12.5"
+        },
+        "chardet": {
+            "hashes": [
+                "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa",
+                "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
+            "version": "==4.0.0"
         },
         "click": {
             "hashes": [
@@ -99,6 +114,14 @@
             ],
             "version": "==1.2.2"
         },
+        "django-recaptcha3": {
+            "hashes": [
+                "sha256:cfeb612b27528ec58e358df1b4e507639ca0f90abeca20badb4beef47e49a070",
+                "sha256:ff1b91b9ddda2753a7a63cd4badec89aabd3d1b067ece9aa68c56b964d5c9cc4"
+            ],
+            "index": "pypi",
+            "version": "==0.4.0"
+        },
         "dynaconf": {
             "hashes": [
                 "sha256:808adfe964f10695846dbf8dad7632e47fc3bc38860fd1887ed57dddffc4eff2",
@@ -106,6 +129,14 @@
             ],
             "index": "pypi",
             "version": "==3.1.2"
+        },
+        "idna": {
+            "hashes": [
+                "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6",
+                "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==2.10"
         },
         "ipython": {
             "hashes": [
@@ -207,11 +238,11 @@
         },
         "prompt-toolkit": {
             "hashes": [
-                "sha256:0bdd2585e5afd00c5f91dd28eb2090ea67e94c385878921939bb4ccfa3904723",
-                "sha256:dc83e6368b0edd9ceabe17a055f2e22f6ed95b9aa39dbd59d0b4f3585bdfe9ed"
+                "sha256:d2b91517488f1478ee30f938303a3d60b04cc0b7c2253e7c83f1b9b7635274b4",
+                "sha256:e2d04e0e4de0c0a8b67db89a5be6dcf81fed6ca7e8c4affca8b7a5b8595c19dd"
             ],
             "markers": "python_full_version >= '3.6.1'",
-            "version": "==3.0.11"
+            "version": "==3.0.13"
         },
         "psycopg2-binary": {
             "hashes": [
@@ -315,6 +346,14 @@
             ],
             "version": "==2020.11.13"
         },
+        "requests": {
+            "hashes": [
+                "sha256:27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804",
+                "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
+            "version": "==2.25.1"
+        },
         "sqlparse": {
             "hashes": [
                 "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0",
@@ -381,6 +420,14 @@
                 "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"
             ],
             "version": "==3.7.4.3"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08",
+                "sha256:d8ff90d979214d7b4f8ce956e80f4028fc6860e4431f731ea4a8c08f23f99473"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
+            "version": "==1.26.2"
         },
         "wcwidth": {
             "hashes": [

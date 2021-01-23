@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "applications.movies.apps.MoviesConfig",
     "ckeditor",
     "ckeditor_uploader",
+    "snowpenguin.django.recaptcha3",
 ]
 
 MIDDLEWARE = [
@@ -251,3 +252,9 @@ CKEDITOR_CONFIGS = {
         ),
     }
 }
+
+
+RECAPTCHA_PUBLIC_KEY = _ds.RECAPTCHA_PUBLIC_KEY
+RECAPTCHA_PRIVATE_KEY = _ds.RECAPTCHA_PRIVATE_KEY
+RECAPTCHA_DEFAULT_ACTION = "generic"
+RECAPTCHA_SCORE_THRESHOLD = 0.5
