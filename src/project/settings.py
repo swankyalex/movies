@@ -123,11 +123,13 @@ STATICFILES_DIRS = [
     DIR_SRC / "static",
 ]
 
-CLOUDINARY_STORAGE = {
-             'CLOUD_NAME': _ds.CLOUD_NAME,
-             'API_KEY': _ds.API_KEY,
-             'API_SECRET': _ds.API_SECRET
-            }
+# CLOUDINARY_STORAGE = {
+#              'CLOUD_NAME': _ds.CLOUD_NAME,
+#              'API_KEY': _ds.API_KEY,
+#              'API_SECRET': _ds.API_SECRET
+#             }
+
+DATABASE_URL = os.getenv("CLOUDINARY_URL")
 
 MEDIA_URL = "/media/"
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
