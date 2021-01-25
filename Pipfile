@@ -17,6 +17,7 @@ pillow = "*"
 django-ckeditor = "*"
 whitenoise = "*"
 django-recaptcha3 = "*"
+django-allauth = "*"
 
 [requires]
 python_version = "3.8"

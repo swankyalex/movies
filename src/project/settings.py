@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     "ckeditor",
     "ckeditor_uploader",
     "snowpenguin.django.recaptcha3",
+    "allauth",
+    "allauth.account",
 ]
 
 MIDDLEWARE = [
@@ -72,6 +74,10 @@ DATABASE_URL = os.getenv("DATABASE_URL", _ds.DATABASE_URL)
 
 DATABASES = {"default": dj_database_url.parse(DATABASE_URL)}
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -98,6 +104,13 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_REDIRECT_URL = "/"
+
+EMAIL_BACKEND = "django.core.mail.backends.dummy.EmailBackend"
 
 STATIC_URL = "/s/"
 
