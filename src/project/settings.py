@@ -129,7 +129,7 @@ STATICFILES_DIRS = [
 #              'API_SECRET': _ds.API_SECRET
 #             }
 
-DATABASE_URL = os.getenv("CLOUDINARY_URL")
+CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
 
 MEDIA_URL = "/media/"
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
