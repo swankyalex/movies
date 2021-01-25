@@ -132,7 +132,9 @@ STATICFILES_DIRS = [
 CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
 
 MEDIA_URL = "/media/"
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+if not DEBUG:
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MEDIA_ROOT = DIR_SRC / "media"
 
