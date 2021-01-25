@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     "applications.contact.apps.ContactConfig",
     "django.contrib.sites",
     "django.contrib.flatpages",
+    'cloudinary_storage',
+    'cloudinary',
     "ckeditor",
     "ckeditor_uploader",
     "snowpenguin.django.recaptcha3",
@@ -121,8 +123,15 @@ STATICFILES_DIRS = [
     DIR_SRC / "static",
 ]
 
+CLOUDINARY_STORAGE = {
+             'CLOUD_NAME': _ds.CLOUD_NAME,
+             'API_KEY': _ds.API_KEY,
+             'API_SECRET': _ds.API_SECRET
+            }
 
 MEDIA_URL = "/media/"
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 MEDIA_ROOT = DIR_SRC / "media"
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
