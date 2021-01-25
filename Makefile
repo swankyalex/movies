@@ -13,6 +13,10 @@ run:
 	$(call log, starting local web server)
 	$(PYTHON) src/manage.py runserver
 
+.PHONY: run-prod
+run-prod:
+	$(call log, starting local web server)
+	$(RUN) gunicorn --config="$(DIR_SCRIPTS)/gunicorn.conf.py" project.wsgi:application
 
 .PHONY: sh
 sh:
