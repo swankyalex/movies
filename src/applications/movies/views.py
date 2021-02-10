@@ -22,9 +22,8 @@ class GenreYear:
     def get_genres(self):
         return Genre.objects.all()
 
-
     def get_years(self):
-        return Movie.objects.filter(draft=False).values("year").order_by('year')
+        return Movie.objects.filter(draft=False).values("year").order_by("year")
 
 
 class MoviesView(GenreYear, ListView):
@@ -151,12 +150,13 @@ class Search(GenreYear, ListView):
         return context
 
 
-class CategoryView(GenreYear, View):
+class CategoryView(GenreYear, ListView):
     """Список фильмов"""
-    def get(self, request, *args, **kwargs):
-        category = Category.objects.filter(url=kwargs["slug"])
-        queryset = Movie.objects.filter(category=category[0])
-        return render(request, 'movies/movie_list.html',
-                      {'movie_list': queryset}
-                  )
 
+    template_name = "movies/movie_list.html"
+    model = Movie
+
+    def get_queryset(self):
+        category = Category.objects.filter(url=self.kwargs["slug"])
+        queryset = Movie.objects.filter(category=category[0])
+        return queryset

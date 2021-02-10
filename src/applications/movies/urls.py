@@ -12,5 +12,4 @@ urlpatterns = [
     path("category/<slug:slug>/", views.CategoryView.as_view(), name="categories"),
     path("review/<int:pk>/", views.AddReview.as_view(), name="add_review"),
     path("actor/<str:slug>/", views.ActorView.as_view(), name="actor_detail"),
-
 ]
