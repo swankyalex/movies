@@ -31,8 +31,8 @@ INSTALLED_APPS = [
     "applications.contact.apps.ContactConfig",
     "django.contrib.sites",
     "django.contrib.flatpages",
-    'cloudinary_storage',
-    'cloudinary',
+    "cloudinary_storage",
+    "cloudinary",
     "ckeditor",
     "ckeditor_uploader",
     "snowpenguin.django.recaptcha3",
@@ -134,7 +134,7 @@ CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
 MEDIA_URL = "/media/"
 
 if not DEBUG:
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 MEDIA_ROOT = DIR_SRC / "media"
 
