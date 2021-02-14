@@ -2,7 +2,6 @@ from django.db.models import Q
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import redirect
-from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic import ListView
 from django.views.generic.base import View
@@ -147,6 +146,10 @@ class Search(GenreYear, ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context["q"] = f'q={self.request.GET.get("q")}&'
+        if context["movie_list"]:
+            context.update({"search_field": context["movie_list"][0]})
+        else:
+            context.update({"search_field": "Фильм не найден"})
         return context
 
 
@@ -160,3 +163,5 @@ class CategoryView(GenreYear, ListView):
         category = Category.objects.filter(url=self.kwargs["slug"])
         queryset = Movie.objects.filter(category=category[0])
         return queryset
+
+
