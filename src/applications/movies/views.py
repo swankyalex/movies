@@ -4,6 +4,8 @@ from django.shortcuts import redirect
 from django.views.generic import DetailView
 from django.views.generic import ListView
 from django.views.generic.base import View
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .forms import RatingForm
 from .forms import ReviewForm
@@ -12,7 +14,8 @@ from .models import Category
 from .models import Genre
 from .models import Movie
 from .models import Rating
-
+from .serializers import MovieListSerializer
+from .serializers import MovieDetailSerializer
 
 class GenreYear:
     """Жанры и годы выхода фильма"""
@@ -143,3 +146,19 @@ class CategoryView(GenreYear, ListView):
         category = Category.objects.filter(url=self.kwargs["slug"])
         queryset = Movie.objects.filter(category=category[0])
         return queryset
+
+
+class MovieApiView(APIView):
+    """Вывод списка фильмов"""
+    def get(self, request):
+        movies = Movie.objects.filter(draft=False)
+        serializer = MovieListSerializer(movies, many=True)
+        return Response(serializer.data)
+
+
+class MovieDetailApiView(APIView):
+    """Вывод фильма"""
+    def get(self, request, pk):
+        movie = Movie.objects.get(id=pk, draft=False)
+        serializer = MovieDetailSerializer(movie)
+        return Response(serializer.data)
