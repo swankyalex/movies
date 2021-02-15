@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "snowpenguin.django.recaptcha3",
     "allauth",
     "allauth.account",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
