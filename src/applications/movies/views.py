@@ -1,8 +1,6 @@
 from django.db.models import Q
 from django.http import HttpResponse
-from django.http import JsonResponse
 from django.shortcuts import redirect
-from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic import ListView
 from django.views.generic.base import View
@@ -93,25 +91,6 @@ class FilterMoviesView(GenreYear, ListView):
         return context
 
 
-class JsonFilterMoviesView(ListView):
-    """Фильтр фильмов в json"""
-
-    def get_queryset(self):
-        queryset = (
-            Movie.objects.filter(
-                Q(year__in=self.request.GET.getlist("year"))
-                | Q(genres__in=self.request.GET.getlist("genre"))
-            )
-            .distinct()
-            .values("title", "tagline", "url", "poster")
-        )
-        return queryset
-
-    def get(self, request, *args, **kwargs):
-        queryset = list(self.get_queryset())
-        return JsonResponse({"movies": queryset}, safe=False)
-
-
 class AddStarRating(View):
     """Добавление рейтинга фильму"""
 
@@ -147,6 +126,10 @@ class Search(GenreYear, ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context["q"] = f'q={self.request.GET.get("q")}&'
+        if context["movie_list"]:
+            context.update({"search_field": context["movie_list"][0]})
+        else:
+            context.update({"search_field": "Фильм не найден"})
         return context
 
 
