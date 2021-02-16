@@ -6,6 +6,8 @@ from .models import Movie
 class MovieListSerializer(serializers.ModelSerializer):
     """Список фильмов"""
 
+    category = serializers.SlugRelatedField(slug_field="name", read_only=True)
+
     class Meta:
         model = Movie
         fields = ("title", "tagline", "category")
