@@ -14,8 +14,9 @@ from .models import Category
 from .models import Genre
 from .models import Movie
 from .models import Rating
-from .serializers import MovieListSerializer
 from .serializers import MovieDetailSerializer
+from .serializers import MovieListSerializer
+
 
 class GenreYear:
     """Жанры и годы выхода фильма"""
@@ -139,6 +140,7 @@ class Search(GenreYear, ListView):
 class CategoryView(GenreYear, ListView):
     """Список фильмов"""
 
+    paginate_by = 3
     template_name = "movies/movie_list.html"
     model = Movie
 
@@ -150,6 +152,7 @@ class CategoryView(GenreYear, ListView):
 
 class MovieApiView(APIView):
     """Вывод списка фильмов"""
+
     def get(self, request):
         movies = Movie.objects.filter(draft=False)
         serializer = MovieListSerializer(movies, many=True)
@@ -158,6 +161,7 @@ class MovieApiView(APIView):
 
 class MovieDetailApiView(APIView):
     """Вывод фильма"""
+
     def get(self, request, pk):
         movie = Movie.objects.get(id=pk, draft=False)
         serializer = MovieDetailSerializer(movie)
