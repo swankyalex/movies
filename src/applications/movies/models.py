@@ -95,7 +95,7 @@ class Movie(models.Model):
         return reverse("movie_detail", kwargs={"slug": self.url})
 
     def get_review(self):
-        return self.reviews_set.filter(parent__isnull=True)
+        return self.reviews.filter(parent__isnull=True)
 
     class Meta:
         verbose_name = "Фильм"
@@ -140,7 +140,9 @@ class Rating(models.Model):
     star = models.ForeignKey(
         RatingStar, on_delete=models.CASCADE, verbose_name="звезда"
     )
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name="фильм")
+    movie = models.ForeignKey(
+        Movie, on_delete=models.CASCADE, verbose_name="фильм", related_name="ratings"
+    )
 
     def __str__(self):
         return f"{self.star} - {self.movie}"
@@ -162,8 +164,11 @@ class Reviews(models.Model):
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name="children",
     )
-    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE)
+    movie = models.ForeignKey(
+        Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name="reviews"
+    )
 
     def __str__(self):
         return f"{self.name} - {self.movie}"
