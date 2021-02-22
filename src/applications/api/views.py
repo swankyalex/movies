@@ -1,6 +1,7 @@
 from django.db import models
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
+from rest_framework import permissions
 
 from applications.api.serializers import ActorDetailSerializer
 from applications.api.serializers import ActorListSerializer
@@ -20,6 +21,7 @@ class MovieApiView(generics.ListAPIView):
     serializer_class = MovieListSerializer
     filter_backends = (DjangoFilterBackend,)
     filterset_class = MovieFilter
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         movies = (
@@ -33,7 +35,7 @@ class MovieApiView(generics.ListAPIView):
                 middle_star=models.Sum(models.F("ratings__star"))
                 / models.Count(models.F("ratings"))
             )
-        )
+        ).order_by("id")
         return movies
 
 

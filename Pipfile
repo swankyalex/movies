@@ -23,6 +23,8 @@ cloudinary = "*"
 djangorestframework = "*"
 gunicorn = "*"
 django-filter = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
 
 [requires]
 python_version = "3.9"
