@@ -17,8 +17,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     _ds.HOST,
-    "be381e98012e.ngrok.io",
-]
+    ]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -27,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "applications.api.apps.ApiConfig",
     "applications.movies.apps.MoviesConfig",
     "applications.contact.apps.ContactConfig",
     "django.contrib.sites",
@@ -123,12 +123,6 @@ STATIC_ROOT = DIR_REPO / ".static"
 STATICFILES_DIRS = [
     DIR_SRC / "static",
 ]
-
-# CLOUDINARY_STORAGE = {
-#              'CLOUD_NAME': _ds.CLOUD_NAME,
-#              'API_KEY': _ds.API_KEY,
-#              'API_SECRET': _ds.API_SECRET
-#             }
 
 CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
 
