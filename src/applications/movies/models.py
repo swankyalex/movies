@@ -95,7 +95,7 @@ class Movie(models.Model):
         return reverse("movie_detail", kwargs={"slug": self.url})
 
     def get_review(self):
-        return self.reviews_set.filter(parent__isnull=True)
+        return self.reviews.filter(parent__isnull=True)
 
     class Meta:
         verbose_name = "Фильм"
@@ -163,7 +163,9 @@ class Reviews(models.Model):
         blank=True,
         null=True,
     )
-    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE)
+    movie = models.ForeignKey(
+        Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name="reviews"
+    )
 
     def __str__(self):
         return f"{self.name} - {self.movie}"
