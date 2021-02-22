@@ -22,6 +22,7 @@ django-cloudinary-storage = "*"
 cloudinary = "*"
 djangorestframework = "*"
 gunicorn = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.9"

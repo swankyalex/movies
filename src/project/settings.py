@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "rest_framework",
+    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -286,3 +287,7 @@ RECAPTCHA_DEFAULT_ACTION = "generic"
 RECAPTCHA_SCORE_THRESHOLD = 0.5
 
 SITE_ID = 1
+
+REST_FRAMEWORK = {
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
+}
