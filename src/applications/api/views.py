@@ -11,6 +11,7 @@ from applications.api.serializers import MovieListSerializer
 from applications.api.serializers import ReviewCreateSerializer
 from applications.api.service import get_client_ip
 from applications.api.service import MovieFilter
+from applications.api.service import PaginationMovies
 from applications.movies.models import Actor
 from applications.movies.models import Movie
 
@@ -22,6 +23,7 @@ class MovieApiView(generics.ListAPIView):
     filter_backends = (DjangoFilterBackend,)
     filterset_class = MovieFilter
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = PaginationMovies
 
     def get_queryset(self):
         movies = (
