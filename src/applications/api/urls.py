@@ -1,5 +1,7 @@
 from django.urls import path
 
+from src.project.yasg import urlpatterns as doc_urls
+
 from . import views
 
 urlpatterns = [
@@ -10,3 +12,5 @@ urlpatterns = [
     path("actors/", views.ActorsListView.as_view()),
     path("actors/<int:pk>/", views.ActorsDetailView.as_view()),
 ]
+
+urlpatterns += doc_urls

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "ckeditor_uploader",
     "djoser",
+    "drf_yasg",
     "snowpenguin.django.recaptcha3",
     "allauth",
     "allauth.account",
