@@ -162,6 +162,7 @@ class Reviews(models.Model):
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
+        related_name="children",
     )
     movie = models.ForeignKey(
         Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name="reviews"
