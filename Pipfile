@@ -21,6 +21,7 @@ django-allauth = "*"
 django-cloudinary-storage = "*"
 cloudinary = "*"
 djangorestframework = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.9"
