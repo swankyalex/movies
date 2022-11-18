@@ -2,12 +2,12 @@
 
 
 
+![CMake](https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white)
 
 [![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5xi8.svg)](https://betteruptime.com/?utm_source=status_badge)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Lines of code](https://img.shields.io/tokei/lines/github/swankyalex/movies)](https://github.com/swankyalex/movies/tree/master)
 ![license](https://img.shields.io/badge/license-Apache%202-blue)
-
 [![python](https://img.shields.io/github/pipenv/locked/python-version/swankyalex/movies)](Pipfile)
 [![dynaconf](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/dynaconf)](Pipfile)
 [![postgresql](https://img.shields.io/badge/PostgreSQL-15.1-blue)](https://postgresql.org)
