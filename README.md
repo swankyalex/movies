@@ -2,25 +2,25 @@
 
 
 
-![CMake](https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white)
+[![Make](https://img.shields.io/badge/Make-%23008FBA.svg?style=for-the-badge&logo=gnu&logoColor=white)](https://www.gnu.org/software/make/)
 
 [![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5xi8.svg)](https://betteruptime.com/?utm_source=status_badge)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Lines of code](https://img.shields.io/tokei/lines/github/swankyalex/movies)](https://github.com/swankyalex/movies/tree/master)
 ![license](https://img.shields.io/badge/license-Apache%202-blue)
-[![python](https://img.shields.io/github/pipenv/locked/python-version/swankyalex/movies)](Pipfile)
-[![dynaconf](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/dynaconf)](Pipfile)
+[![python](https://img.shields.io/github/pipenv/locked/python-version/swankyalex/movies)](https://www.python.org/)
+[![dynaconf](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/dynaconf)](https://www.dynaconf.com/)
 [![postgresql](https://img.shields.io/badge/PostgreSQL-15.1-blue)](https://postgresql.org)
 
-[![django](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/django)](Pipfile)
-[![whitenoise](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/whitenoise)](Pipfile)
-[![django-recaptcha3](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/django-recaptcha3)](Pipfile)
-[![django-allauth](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/django-allauth)](Pipfile)
-[![cloudinary](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/cloudinary)](Pipfile)
+[![django](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/django)](https://www.djangoproject.com/)
+[![whitenoise](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/whitenoise)](http://whitenoise.evans.io/en/latest/)
+[![django-recaptcha3](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/django-recaptcha3)](https://github.com/torchbox/django-recaptcha)
+[![django-allauth](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/django-allauth)](https://django-allauth.readthedocs.io/en/latest/installation.html)
+[![cloudinary](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/cloudinary)](https://cloudinary.com/)
 
-[![djangorestframework](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/djangorestframework)](Pipfile)
-[![gunicorn](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/gunicorn)](Pipfile)
-[![djoser](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/djoser)](Pipfile)
+[![djangorestframework](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/djangorestframework)](https://www.django-rest-framework.org/)
+[![gunicorn](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/gunicorn)](https://gunicorn.org/)
+[![djoser](https://img.shields.io/github/pipenv/locked/dependency-version/swankyalex/movies/djoser)](https://djoser.readthedocs.io/en/latest/getting_started.html)
 
 [![code size](https://img.shields.io/github/languages/code-size/swankyalex/movies)](./)
 [![repo size](https://img.shields.io/github/repo-size/swankyalex/movies)](./)
